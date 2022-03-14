@@ -6,7 +6,7 @@
 /*   By: amane <amane@studente.42lisboa.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 03:05:51 by amane             #+#    #+#             */
-/*   Updated: 2022/03/14 16:16:59 by amane            ###   ########.fr       */
+/*   Updated: 2022/03/14 17:09:26 by amane            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,6 @@ int	ft_printf_hex(unsigned int nb, char c);
 int	ft_unsigned_int(unsigned int nb);
 int	ft_printf(const char *str, ...);
 int	ft_main_print(va_list list, const char *str);
+int	ft_print_pointer(unsigned long long nb);
 
 #endif

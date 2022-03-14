@@ -1,25 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_print_pointer.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amane <amane@studente.42lisboa.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/13 04:11:53 by amane             #+#    #+#             */
-/*   Updated: 2022/03/14 17:39:40 by amane            ###   ########.fr       */
+/*   Created: 2022/03/14 16:37:06 by amane             #+#    #+#             */
+/*   Updated: 2022/03/14 17:38:56 by amane            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	main(void)
+static int	ft_print_longhex(unsigned long long nb, char c)
 {
-	char	*ptr;
+	size_t	i;
 
-	ptr = "ola";
+	i = 0;
+	if (nb <= 15)
+		i += ft_printf_hex((unsigned int) nb, c);
+	else
+	{
+		i += ft_print_longhex((nb / 16), c);
+		i += ft_print_longhex((nb % 16), c);
+	}
+	return (i);
+}
 
-	ft_printf("%p\n", ptr);
-	printf("%p\n\n", ptr);
-
+int	ft_print_pointer(unsigned long long nb)
+{
+	ft_printstr("0x");
+	ft_print_longhex(nb, 'x');
 	return (0);
 }

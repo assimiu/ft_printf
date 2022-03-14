@@ -6,7 +6,7 @@
 /*   By: amane <amane@studente.42lisboa.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 15:31:29 by amane             #+#    #+#             */
-/*   Updated: 2022/03/14 16:19:11 by amane            ###   ########.fr       */
+/*   Updated: 2022/03/14 17:08:59 by amane            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ int	ft_print_format(va_list list, char c)
 		i = ft_unsigned_int(va_arg(list, unsigned int));
 	else if (c == 'x' || c == 'X')
 		i = ft_printf_hex(va_arg(list, unsigned int), c);
+	else if (c == 'p')
+		i = ft_print_pointer(va_arg(list, unsigned long long));
 	else if (c == '%')
 		i = ft_printchar('%');
 	return (i);
