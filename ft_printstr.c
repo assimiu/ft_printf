@@ -6,7 +6,7 @@
 /*   By: amane <amane@studente.42lisboa.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 15:04:06 by amane             #+#    #+#             */
-/*   Updated: 2022/03/14 07:59:01 by amane            ###   ########.fr       */
+/*   Updated: 2022/03/14 18:16:47 by amane            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_printstr(char *str)
 	if (!str)
 	{
 		write(1, "(null)", 6);
-		return (0);
+		return (6);
 	}
 	i = ft_strlen(str);
 	write(1, str, i);

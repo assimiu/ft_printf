@@ -6,7 +6,7 @@
 /*   By: amane <amane@studente.42lisboa.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 16:37:06 by amane             #+#    #+#             */
-/*   Updated: 2022/03/14 17:38:56 by amane            ###   ########.fr       */
+/*   Updated: 2022/03/14 18:25:19 by amane            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,11 @@ static int	ft_print_longhex(unsigned long long nb, char c)
 
 int	ft_print_pointer(unsigned long long nb)
 {
-	ft_printstr("0x");
-	ft_print_longhex(nb, 'x');
-	return (0);
+	int	i;
+
+	if (nb == 0)
+		return (ft_printstr("(nil)"));
+	i = ft_printstr("0x");
+	i += ft_print_longhex(nb, 'x');
+	return (i);
 }

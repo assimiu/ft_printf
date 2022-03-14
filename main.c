@@ -6,7 +6,7 @@
 /*   By: amane <amane@studente.42lisboa.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 04:11:53 by amane             #+#    #+#             */
-/*   Updated: 2022/03/14 17:39:40 by amane            ###   ########.fr       */
+/*   Updated: 2022/03/14 19:06:43 by amane            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,7 @@
 
 int	main(void)
 {
-	char	*ptr;
-
-	ptr = "ola";
-
-	ft_printf("%p\n", ptr);
-	printf("%p\n\n", ptr);
+	printf("\n\n(%i)\n\n",ft_printnbr(-2));
 
 	return (0);
 }
