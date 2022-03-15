@@ -1,6 +1,3 @@
-PATH_LIB = libs/
-PATH_INC = include/
-PATH_OBJS = objs/
 FLS = -Wall -Wextra -Werror
 GCC = gcc
 RM = rm -f
@@ -21,12 +18,9 @@ $(NAME): $(SRC)
 	$(GCC) $(FLS) -c $< -o $@
 
 clean:
-	mv *.o ../LIXO
+	$(RM) $(SRC)
 
 fclean: clean
-	mv *.a ../LIXO
+	$(RM) $(NAME)
 
 re: fclean all
-
-a:
-	$(GCC) $(FLS) main.c -o main.o libftprintf.a && ./main.o

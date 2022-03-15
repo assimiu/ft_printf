@@ -16,6 +16,7 @@
 # include <stdio.h>
 # include <unistd.h>
 # include <stdarg.h>
+
 int	ft_printchar(char c);
 int	ft_printnbr(int nb);
 size_t	ft_printstr(char *str);
